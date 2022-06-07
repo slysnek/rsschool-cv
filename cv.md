@@ -1,5 +1,4 @@
 # Kirill Volkov
-
 ## Contacts
 * **E-mail:** bloodwingest@gmail.com
 * **Telegram:** @screwpassenger
@@ -11,8 +10,7 @@
 * **SQL**
 * **Git**
 ## Code example
-*A small part of the code from my web-project written on Flask describing the innerworkings of signing up*
-
+*A small part of the code from my web-project written on Flask describing the innerworkings of signing up:*
 ```
 @auth.route("/sign-up", methods=['GET', 'POST'])
 def sign_up():
@@ -46,11 +44,9 @@ def sign_up():
             return redirect(url_for('views.home'))
 
     return render_template("signup.html", user = current_user)
-    
 ```
-
 ## Education
-Graduated with honors from LUNN (Linguistic University of Nizhniy Novgorod)
+Graduated with honors from **LUNN** (Linguistic University of Nizhniy Novgorod)
 ## Courses
 * **CS50X 2022**
 * **RSSchool Front-end course**
