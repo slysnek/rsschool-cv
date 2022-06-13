@@ -148,7 +148,7 @@ a:hover{
   column-gap: 50px;;
 }
 
-@media (max-width: 950px){
+@media (max-width: 1020px){
   .main-container{
     grid-template-columns: 1fr;
   }
