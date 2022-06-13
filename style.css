@@ -30,7 +30,7 @@ a:hover{
   background-color: #ebc6b3;
 }
 
-@media (max-width: 1080px){
+@media (max-width: 1000px){
   .header{
     flex-direction: column;
   }
@@ -64,7 +64,7 @@ a:hover{
   background-color: beige;
 }
 
-@media (max-width: 1080px){
+@media (max-width: 1000px){
   .navigation-list{
     flex-direction: column;
   }
@@ -148,7 +148,7 @@ a:hover{
   column-gap: 50px;;
 }
 
-@media (max-width: 1020px){
+@media (max-width: 1000px){
   .main-container{
     grid-template-columns: 1fr;
   }
