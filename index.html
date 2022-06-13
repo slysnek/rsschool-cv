@@ -124,11 +124,11 @@
             flash('Username is already in use', category='error')
         elif password1 != password2:
             flash('Password don\'t match', category='error')
-        elif len(username) <&lt;2:
+        elif len(username) &#60; 2:
             flash('Username is too short.', category = 'error')
-        elif len(password1) <&lt;6:
+        elif len(password1) &#60; 6:
             flash('Password is too short.', category = 'error')
-        elif len(email) <&lt;4:
+        elif len(email)	&#60; 4:
             flash("Email is invalid", category='error')
         else:
             new_user = User(email=email, username=username,
