@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <ul class="navigation-list">
+        <li><a href="#myself">About Myself</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#languages">Languages</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#code-examp">Code Example</a></li>
+      </ul>
+    </nav>
+    <header class="header">
+      <div class="avatar">
+        <img id="myAvatar" src="assets/avatar.jpg" alt="my avatar" />
+        <span class="tooltip">Hello! ♡</span>
+      </div>
+      <div class="name">
+        <h1>Kirill Volkov</h1>
+        <h3>Junior Frontend Developer</h3>
+      </div>
+      <div class="contacts">
+        <h2 class="contacts-header">Contacts</h2>
+        <ul>
+          <li>
+            <a class="email" href="mailto:bloodwingest@gmail.com">
+              Email: bloodwingest@gmail.com</a
+            >
+          </li>
+          <li class="telegram"> Telegram: @screwpassenger</li>
+          <li class="discord"> Discord: Cpt.Bloodwing#2351</li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="main-container">
+        <div class="first-column">
+          <h2 id="myself">About Myself</h2>
+          <div>
+            <p>
+              Responsible, communicative, reliable, ambitious, hardworking, a
+              quick-learner. Always motivated to learn something new. Can work
+              in stressful situations.
+            </p>
+          </div>
+          <h2 id="education">Education</h2>
+          <div>
+            Graduated with honors from <b>LUNN</b> (Linguistic University of
+            Nizhniy Novgorod)
+          </div>
+          <h2 id="languages">Languages</h2>
+          <div>
+            <ul>
+              <li>
+                English: C1 (also worked as a private tutor, therefore I have
+                solid teaching experience and language practice)
+              </li>
+              <li>German: A2-B1</li>
+              <li>Russian: Native</li>
+            </ul>
+          </div>
+        </div>
+        <div class="second-column">
+          <h2 id="skills">Skills</h2>
+          <div>
+            <ul>
+              <li>HTML, CSS, Bootstrap</li>
+              <li>Javascript</li>
+              <li>Python, Flask</li>
+              <li>Adobe Photoshop, Figma</li>
+              <li>SQLite</li>
+              <li>Git</li>
+            </ul>
+          </div>
+          <h2 id="courses">Courses</h2>
+          <div>
+            <ul>
+              <li>CS50X 2022</li>
+              <li>RSSchool Front-end course</li>
+              <li>Hexlet JavaScript Course</li>
+              <li>Innumerable tutorials on YouTube, Udemy, etc.</li>
+            </ul>
+          </div>
+          <h2 id="projects">Projects</h2>
+          <div>
+            <ul>
+              <li>
+            <a href="https://github.com/slysnek/Finance-Test">CS50 Finance Project</a>
+              </li>
+           </ul>
+          </div>
+        </div>
+      </div>
+      <div class="code-container">
+        <h2 id="code-examp">Code Example</h2>
+        <i
+          >A small part of the code from my web-project written on Flask
+          describing the innerworkings of signing up:</i
+        >
+        <details class="code-details">
+          <summary>Code Example&#160;&#160;</summary>
+          <div class="code-example">
+            <pre><code data-language="python">
+  @auth.route("/sign-up", methods=['GET', 'POST'])
+  def sign_up():
+
+    if request.method == "POST":
+        email = request.form.get("email")
+        username = request.form.get("username")
+        password1 = request.form.get("password1")
+        password2 = request.form.get("password2")
+
+        email_exists = User.query.filter_by(email=email).first()
+        username_exists = User.query.filter_by(username=username).first()
+
+        if email_exists:
+            flash('Email is already in use', category='error')
+        elif username_exists:
+            flash('Username is already in use', category='error')
+        elif password1 != password2:
+            flash('Password don\'t match', category='error')
+        elif len(username) &#60; 2:
+            flash('Username is too short.', category = 'error')
+        elif len(password1) &#60; 6:
+            flash('Password is too short.', category = 'error')
+        elif len(email)	&#60; 4:
+            flash("Email is invalid", category='error')
+        else:
+            new_user = User(email=email, username=username,
+            password=generate_password_hash(password1, method='sha256'))
+            db.session.add(new_user)
+            db.session.commit()
+            login_user(new_user, remember=True)
+            flash('User created!')
+            return redirect(url_for('views.home'))
+
+    return render_template("signup.html", user = current_user)
+  </code></pre>
+          </div>
+        </details>
+      </div>
+    </main>
+    <footer>
+      <a href="https://github.com/slysnek">Github</a>
+      <a href="https://rs.school/js/"
+        ><img
+          id="rss-logo"
+          src="https://rs.school/images/rs_school_js.svg"
+          alt="rolling-scopes-logo"
+      /></a>
+      <span>2022</span>
+    </footer>
+  </body>
+</html>
