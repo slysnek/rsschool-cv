@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <title>CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,6 +16,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <nav class="nav">
+      <ul class="navigation-list">
+        <li><a href="#myself">About Myself</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#languages">Languages</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#code-examp">Code Example</a></li>
+      </ul>
+    </nav>
     <header class="header">
     <div class="avatar">
       <img id="myAvatar" src="assets/avatar.jpg" alt="my avatar" />
@@ -20,12 +33,13 @@
     </div>
       <div class="name">
         <h1>Kirill Volkov</h1>
-        <h3>Junior Frontend Developer</h2>
+        <h3>Junior Frontend Developer</h3>
       </div>
       <div class="contacts">
         <h2 class="contacts-header">Contacts</h2>
         <ul>
-          <li><a class="email" href=""> E-mail: bloodwingest@gmail.com</a></li>
+          <li>
+            <a class="email" href="mailto:bloodwingest@gmail.com"> Email: bloodwingest@gmail.com</a></li>
           <li><a class="telegram" href=""> Telegram: @screwpassenger</a></li>
           <li><a class="discord" href=""> Discord: Cpt.Bloodwing#2351</a></li>
         </ul>
@@ -35,16 +49,16 @@
       <div class="main-container">
         <div class="first-column">
           <h2>About Myself</h2>
-          <div class="myself">
+          <div id="myself">
             <p>Responsible, communicative, reliable, ambitious, hardworking, a quick-learner.
             Always motivated to learn something new. Can work in stressful situations.</p>
           </div>
           <h2>Education</h2>
-          <div class="education">
+          <div id="education">
             Graduated with honors from <b>LUNN</b> (Linguistic University of Nizhniy Novgorod)
           </div>
           <h2>Languages</h2>
-          <div class="languages">
+          <div id="languages">
             <ul>
               <li>English: C1 (also worked as a private tutor, therefore I have solid teaching experience and language practice)</li>
               <li>German: A2-B1</li>
@@ -54,7 +68,7 @@
         </div>
         <div class="second-column">
           <h2>Skills</h2>
-          <div class="Skills">
+          <div id="skills">
             <ul>
               <li>HTML, CSS, Bootstrap
               </li>
@@ -66,7 +80,7 @@
             </ul>
           </div>
           <h2>Courses</h2>
-          <div class="courses">
+          <div id="courses">
             <ul>
               <li>CS50X 2022</li>
               <li>RSSchool Front-end course</li>
@@ -78,11 +92,11 @@
       </div>
     </div>
     <div class="code-container">
-        <h2>Code Example</h2>
+        <h2 id="code-examp">Code Example</h2>
+        <i>A small part of the code from my web-project written on Flask describing the innerworkings of signing up:</i>
         <details class="code-details">
-          <summary>Code Example&#160&#160</summary>
+          <summary>Code Example&#160;&#160;</summary>
           <div class="code-example">
-            <i>A small part of the code from my web-project written on Flask describing the innerworkings of signing up:</i>
             <pre><code data-language="python">
   @auth.route("/sign-up", methods=['GET', 'POST'])
   def sign_up():
