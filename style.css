@@ -219,7 +219,7 @@ footer{
   background-color: #555555;
 }
 
-footer a{
+footer a, footer span{
   color: beige;
   margin-right: 30px;
 }
