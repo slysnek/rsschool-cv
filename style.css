@@ -5,14 +5,14 @@
 
 body {
   height: 100vh;
-  background-color: #fbfdb5;
+  background-color: #fdecb9;
   font-size: 20px;
-  color: #333333;
+  color: #444444;
   font-family: 'Montserrat', sans-serif;
 }
 
 a{
-  color: black;
+  color: #444444;
   text-decoration: none;
 }
 
@@ -27,7 +27,7 @@ a:hover{
   align-items: center;
   flex-direction: row;
   justify-content: space-around;
-  background-color: #F9FE72;
+  background-color: #ebc6b3;
 }
 
 @media (max-width: 1080px){
@@ -86,7 +86,6 @@ a:hover{
 }
 
 #myAvatar{
-  border: 1px solid black;
   border-radius: 50%;
   background-size: cover;
   width:250px;
@@ -136,8 +135,8 @@ a:hover{
 .contacts-header{
   text-align: center;
   padding: 12px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid #444444;
+  border-bottom: 1px solid #444444;
 }
 
 .main-container{
@@ -159,8 +158,8 @@ a:hover{
   padding: 5px 0;
   margin: 30px 0;
   text-align: center;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black
+  border-top: 1px solid #444444;
+  border-bottom: 1px solid #444444
 }
 
 .main-container li{
@@ -178,7 +177,7 @@ a:hover{
 .code-example{
   padding: 20px;
   font-size: 0.6em;
-  background-color: #F9FE72;
+  background-color: #ebc6b3;
 }
 
 i{
